@@ -1,5 +1,6 @@
 {
   "main": "dist/index.js",
+  "homepage": "http://ergusto.github.io/typescript-react-tailwind-storybook-component-library-example",
   "scripts": {
     "build": "tsup",
     "storybook": "storybook dev -p 6006",
