@@ -2,14 +2,14 @@
 
 ## Objectives
 
-* Bundle a React Component library using Typescript
+* Bundle a Typescript React Component library using tsup
 * Use TailwindCSS for Styling, but do not require it in the parent application
 * Use Storybook to document the library
 	* Host the Storybook on Github Pages
     * Deploy the Storybook to Github Pages via a Github Action
 * Export type definitions in the output for use by consumers of the library
-* Based on Radix UI
-* Should be publishable on NPM
+* Base the library on Radix UI
+* The library be publishable on NPM
 
 ## Example usage
 
