@@ -41,7 +41,3 @@ import { Navbar } from 'hub-component-library';
 ```
 npm run storybook
 ```
-
-## Publish
-
-Builds during an NPM release with the `prepublish` script.
