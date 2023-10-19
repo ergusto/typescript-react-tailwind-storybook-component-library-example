@@ -41,3 +41,17 @@ import { Navbar } from 'hub-component-library';
 ```
 npm run storybook
 ```
+
+### Testing locally
+
+Use `yalc` ([https://github.com/wclr/yalc](https://github.com/wclr/yalc)) to test the NPM package locally before publishing. It creates a local package repository and allows you to install packages from it within your local environemnt.
+
+```
+yalc publish
+```
+
+Create a separate NPM project locally and install with:
+
+```
+yalc add hub-component-library
+```
