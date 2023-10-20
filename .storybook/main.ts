@@ -1,5 +1,10 @@
 import type { StorybookConfig } from "@storybook/react-vite";
 
+import { mergeConfig } from "vite";
+// type Webpack = (config: any, { configType }) => Promise<any>;
+// interface StorybookConfig extends Config {
+//   viteFinal: Webpack;
+// }
 const config: StorybookConfig = {
   stories: [
     // {
@@ -10,6 +15,7 @@ const config: StorybookConfig = {
     "../src/**/*.jsx",
     "../stories/**/*.stories.@(js|jsx|mjs|ts|tsx)",
   ],
+
   addons: [
     "@storybook/addon-links",
     "@storybook/addon-essentials",
@@ -22,6 +28,19 @@ const config: StorybookConfig = {
   },
   docs: {
     autodocs: "tag",
+  },
+  async viteFinal(config) {
+    return {
+      ...config,
+      resolve: {
+        alias: [
+          {
+            find: "@",
+            replacement: "./src",
+          },
+        ],
+      },
+    };
   },
 };
 export default config;
