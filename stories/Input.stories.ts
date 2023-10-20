@@ -11,16 +11,8 @@ const meta: Meta<typeof Input> = {
 export default meta;
 type Story = StoryObj<typeof Input>;
 
-export const LightMode: Story = {
+export const InputStory: Story = {
   args: {
     //👇 The args you need here will depend on your component
-    darkmode: false,
-  },
-};
-
-export const DarkMode: Story = {
-  args: {
-    //👇 The args you need here will depend on your component
-    darkmode: true,
   },
 };
