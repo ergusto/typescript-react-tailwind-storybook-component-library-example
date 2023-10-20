@@ -1,10 +1,5 @@
+import path from "path";
 import type { StorybookConfig } from "@storybook/react-vite";
-
-import { mergeConfig } from "vite";
-// type Webpack = (config: any, { configType }) => Promise<any>;
-// interface StorybookConfig extends Config {
-//   viteFinal: Webpack;
-// }
 const config: StorybookConfig = {
   stories: [
     // {
@@ -29,18 +24,15 @@ const config: StorybookConfig = {
   docs: {
     autodocs: "tag",
   },
-  async viteFinal(config) {
-    return {
-      ...config,
-      resolve: {
-        alias: [
-          {
-            find: "@",
-            replacement: "./src",
-          },
-        ],
-      },
-    };
+  async viteFinal(config, options) {
+    if (config && config.resolve) {
+      config.resolve.alias = {
+        ...config.resolve.alias,
+        "@": "../src",
+      };
+    }
+
+    return config;
   },
 };
 export default config;
