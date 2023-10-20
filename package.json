@@ -2,9 +2,11 @@
   "main": "dist/index.js",
   "homepage": "http://ergusto.github.io/typescript-react-tailwind-storybook-component-library-example",
   "scripts": {
+    "lint": "eslint .",
     "build": "tsup",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
+    "prepare": "husky install",
     "prepublish": "npm run build"
   },
   "devDependencies": {
@@ -31,5 +33,8 @@
     "@radix-ui/react-icons": "^1.3.0",
     "clsx": "^2.0.0",
     "tailwind-merge": "^1.14.0"
+  },
+  "lint-staged": {
+    "*.{js,jsx}": "eslint --cache --fix"
   }
 }
