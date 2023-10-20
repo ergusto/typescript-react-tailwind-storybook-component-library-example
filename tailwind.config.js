@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.tsx"],
+  content: ["./src/**/*.tsx", "./stories/**/*.{tsx,ts}"],
   theme: {
     extend: {
       keyframes: {
@@ -20,5 +20,4 @@ module.exports = {
     },
   },
   plugins: [],
-}
-
+};
