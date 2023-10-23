@@ -6,7 +6,7 @@ import { InputDemo } from "./Input.demo";
 //👇 This default export determines where your story goes in the story list
 const meta: Meta<typeof InputDemo> = {
   component: InputDemo,
-  title: "Text Input Field",
+  title: "Components/Text Input Field",
   tags: ["autodocs"],
 };
 
